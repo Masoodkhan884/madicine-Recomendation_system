@@ -72,16 +72,16 @@ st.markdown("""
 # ---------------------- Data Loading ----------------------
 @st.cache_data
 def load_data():
-    with open("Model/svc.pkl", "rb") as file:
+    with open("svc.pkl", "rb") as file:
         model = pickle.load(file)
     
     return (
         model,
-        pd.read_csv("Dataset/description.csv"),
-        pd.read_csv("Dataset/precautions_df.csv"),
-        pd.read_csv("Dataset/medications.csv"),
-        pd.read_csv("Dataset/diets.csv"),
-        pd.read_csv("Dataset/workout_df.csv")
+        pd.read_csv("description.csv"),
+        pd.read_csv("precautions_df.csv"),
+        pd.read_csv("medications.csv"),
+        pd.read_csv("diets.csv"),
+        pd.read_csv("workout_df.csv")
     )
 
 model, disease_description, precautions, medications, diet, workout_df = load_data()
