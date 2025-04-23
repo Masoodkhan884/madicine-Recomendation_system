@@ -385,10 +385,10 @@ if st.session_state.predict:
         # Recommendations Grid
         cols = st.columns(4)
         recommendations = [
-            ("🛡️ Precautions", precaution_list, "#FFD700"),
+            ("🛡️ Precautions",precaution_list[1:], "#FFD700"),
             ("💊 Medications", medication_list, "#4CAF50"),
-            ("🥗 Diet Plan", diet_list, "#FF6B6B"),
-            ("🏋️ Fitness", workout_list, "#9C27B0")
+            ("🥗 Diet Plan", diet_list , "#FF6B6B"),
+            ("🏋️ Fitness", workout_list[1::2], "#9C27B0")
         ]
 
         for col, (title, items, color) in zip(cols, recommendations):
